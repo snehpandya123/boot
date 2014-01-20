@@ -1,0 +1,145 @@
+<div class="container">
+  <div class="alert alert-success"></div>
+  Wellcome you have successfully signed_in :)
+    <hr />
+</div>
+<div class="row">
+  <div class="span2">
+    <div>{class: "well"}</div>
+  </div>
+</div>
+<button class="btn btn-success">
+  <i class="fa fa-bar-chart-o"></i>
+  View Graph
+  <br />
+  <br />
+</button>
+<ul class="nav navbar-nav navbar-right">
+  <li class="dropdown">
+    <button class="btn btn-info">
+      <i class="fa fa-stack-exchange"></i>
+      Replication
+    </button>
+  </li>
+  <span class="label label-primary">
+    42
+    <div class="span6">
+      <div class="well">
+        <div id="home" class="col-md-9 well admin-content"></div>
+      </div>
+    </div>
+  </span>
+</ul>
+<div id="container">{style: "height: 350px"}
+  <div id="addvendor" class="col-md-9 well admin-content">
+    Add Vendor
+  </div>
+  <div id="viewvendor" class="col-md-9 well admin-content">
+    <form id="login-nav" class="form">{"accept-charset" => "UTF-8", action: "login", method: "post", role: "form"}</form>
+  </div>
+  <h3>
+    <i>
+      <b>
+        <u>
+          Marck Bioscience Pvt.Ltd
+        </u>
+      </b>
+    </i>
+    <h4>
+      <center>
+        <i class="fa fa-hand-o-right"></i>
+        <b>
+          <u>Employee></u>
+        </b>
+        <i class="fa fa-hand-o-left"></i>
+      </center>
+    </h4>
+    <div class="form-group">
+      <div class="input-group margin-bottom-sm">
+        <table>
+          <tr>
+            <td>
+              <span class="input-group-addon">
+                <i class="fa fa-envelope-o"></i>
+              </span>
+            </td>
+            <td>
+              <center>
+                <input class="form-control" />{placeholder: "User-Name", type: "text"}/</center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-key"></i>
+                </span>
+              </div>
+            </td>
+            <td>
+              <input class="form-control" />{placeholder: "Password", type: "password"}/</td>
+          </tr>
+        </table>
+      </div>
+      <center>
+        <button class="btn btn-success btn-lg btn3d">{type: "button"} LOGIN</button>
+        <button class="btn btn-danger btn-lg btn3d">{type: "button"} CANCEL</button>
+      </center>
+    </div>
+  </h3></div>
+<div id="addasset" class="col-md-9 well admin-content">
+  Add your assets as in the dilogue box
+  <div id="viewasset" class="col-md-9 well admin-content">
+    view asset
+  </div>
+  <div id="assetpending" class="col-md-9 well admin-content">
+    Asset Pending
+  </div>
+  <div id="instock" class="col-md-9 well admin-content">
+    Instock
+  </div>
+</div>
+<div class="span3">
+  <div class="well">
+    <ul class="nav nav-pills nav-stacked admin-menu">
+      <li>
+        <a>{"data-target-id" => "home", href: "#"}          <i class="fa fa-home fa-fw"></i>Home</a>
+      </li>
+      <li></li>
+    </ul>
+  </div>
+  <a>{"data-target-id" => "addvendor", href: "#"}    <i class="fa fa-male"></i>Add Vendor
+    <li>
+      <a>{"data-target-id" => "viewvendor", href: "#"}        <i class="fa fa-eye"></i>View Vendor</a>
+    </li>
+    <li></li></a>
+  <a class="link">{"dara-target-id" => "addasset", "data-toggle" => "modal", href: "#sneh", role: "label"}    <i class="fa fa-shopping-cart"></i>Add Asset
+    <li>
+      <a>{"data-target-id" => "viewasset", href: "#"}        <i class="fa fa-eye"></i>View Asset</a>
+    </li></a>
+  <li>
+    <a>{"data-target-id" => "assetpending", href: "#"}      <i class="fa fa-meh-o"></i>Asset Pending</a>
+    <li>
+      <a>{"data-target-id" => "instock", href: "#"}        <i class="fa fa-plus"></i>In Stock</a>
+    </li>
+  </li>
+  <div id="sneh" class="modal hide fade">{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+    <div class="modal-header">
+      <button class="close">{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×</button>
+      <h3 id="myModalLabel">Add Asset</h3>
+    </div>
+    <div class="modal-body">
+      <p></p>
+      <h3></h3>
+    </div>
+    <div class="alert alert-danger">
+      OOPSSS Not elizeble.. only
+      <b>
+        <u>Authorize Person</u>
+      </b>
+      can use this features
+      <a class="btn btn-success">{href: "/authorizes/sign_in"}        <i class="fa fa-check"></i>click here</a>
+      to sign in.
+      <p></p>
+    </div></div>
+</div>

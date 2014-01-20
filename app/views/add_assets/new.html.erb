@@ -1,0 +1,30 @@
+<html>
+<body>
+<div class='popup'>
+<div class='content'>
+<img src='http://www.developertips.net/demos/popup-dialog/img/x.png' alt='quit' class='x' id='x' />
+<p>
+ <%= form_for(@add_asset) do |f| %>
+          <table width="700">
+            <tr>
+              <td>
+                <%= f.label :item %>
+                <h3><i class="fa fa-user"></i>
+                  <%= f.text_field :item %>
+                </h3>
+              </td>
+          </tr>
+      </table>
+      <% end %>
+      
+<br/>
+<br/>
+<a href='' class='close'>Close</a>
+</p>
+</div>
+</div>         
+<div id='container'>
+<a href='' class='click'><h2><b>Click Here to See Popup! </b></h2></a> <br/>
+</div>
+</body>
+</html>

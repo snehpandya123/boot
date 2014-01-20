@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boot</title>
+  <%= stylesheet_link_tag 'bootstrap',:media => 'screen'%>
+  <%= javascript_include_tag "application" %>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  
+ 
+  
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+  <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+ </head>
+  <body>
+   <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+     <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+       <a class="brand" href= "">Marck BioScience Pvt Ltd</a>
+        <div class="nav-collapse">
+         <ul class="nav nav-tabs">
+          <li><%= link_to "HOME", pages_home_path %></li>
+          <li><%= link_to "HELP", pages_help_path %></li>
+          <li><%= link_to "CONTACT", pages_contact_path %></li>
+          <li><%= link_to "ABOUT",pages_about_path %></li>
+          <% if signed_in? %>
+             
+               <li><%= link_to "DEVELOPER", pages_developer_path %></li>
+            <li><div class="dropdown">
+            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" >
+                PAGES <span class="caret"></span>
+            </a>
+        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+              <li><a href="#">Main</a></li>
+              <li><a href="#">Some other action</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Hover me for more options</a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "vendors" , vendors_path %></li>
+                  <li class="dropdown-submenu">
+                    <a href="#">Even More..</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">3rd level</a></li>
+                      <li><a href="#">3rd level</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Second level</a></li>
+                  <li><a href="#">Second level</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div></li>
+            <li><%= link_to "SIGNOUT", destroy_authorize_session_path, :method => :delete ,:data => { confirm: 'Are you sure?' }  %></li>
+
+            <% else %>
+            <li>
+            <div class="dropdown">
+             <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#"><i class="fa fa-user fa-fw"></i>SIGN_IN <span class="caret">
+             </span>
+             </a>
+              <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+              <li class ="dropdown-submenu"><a tabindex="-1"  href="#">General Manager</a>
+              <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                        <li>
+                           <div class="row">
+                              <div class="col-md-12">\
+                             
+                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                   <h3>
+                                     <i> 
+                                       <b>
+                                         <ul>
+                                            Marck Bioscience Pvt.Ltd
+                                         </ul>
+                                       </b>
+                                     </i>
+                                   </h3>
+                                   <h4> General Manager
+                                   </h4>
+                                     <div class="form-group">
+                                       <div class="input-group margin-bottom-sm">
+                                         <table>
+                                           <tr>
+                                             <td>
+                                              <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                            </td>
+                                            <td>
+                                              <input class="form-control" type="text" placeholder="User-Name">
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                            </td>
+                                            <td><input class="form-control" type="password" placeholder="Password">
+                                            </td>
+                                              </div>
+                                          </tr>
+                                        </table>
+                                        </div><center>
+                                           <button type="button" class="btn btn-success btn-lg btn3d"><i class="fa fa-sign-in"></i>LOGIN</button>
+                                        <button type="button" class="btn btn-danger btn-lg btn3d">CANCEL</button>
+                                          </center> 
+                                          </div> 
+                                 </form>
+                                </div>
+                              </div>
+                            </li>
+                         </ul>
+                      </li>
+                      <li class ="dropdown-submenu"><a tabindex="-1"  href="#">Employee</a>
+              <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                        <li>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                   <h3>
+                                     <i> 
+                                       <b>
+                                         <u>
+                                            Marck Bioscience Pvt.Ltd
+                                         </u>
+                                       </b>
+                                     </i>
+                                   </h3>
+                                   <h4><center><i class="fa fa-hand-o-right"></i></i><b><u>Employee></u></b><i class="fa fa-hand-o-left"></i> </center>
+                                   </h4>
+                                     <div class="form-group">
+                                       <div class="input-group margin-bottom-sm">
+                                         <table>
+                                           <tr>
+                                             <td>
+                                              <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                            </td>
+                                            <td><center>
+                                              <input class="form-control" type="text" placeholder="User-Name">
+                                              </center>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                            </td>
+                                            <td><input class="form-control" type="password" placeholder="Password">
+                                            </td>
+                                              </div>
+                                          </tr>
+                                        </table>
+                                        </div><center>
+                                           <button type="button" class="btn btn-success btn-lg btn3d">LOGIN</button>
+                                            <button type="button" class="btn btn-danger btn-lg btn3d"> CANCEL</button>
+                                           </center></div> 
+                                 </form>
+                                </div>
+                              </div>
+                            </li>
+                         </ul>
+                      </li>
+                       <li class="divider"></li>
+                       <li><a tabindex="#"  href="http://localhost:3000/authorizes/sign_in">Authorized Person</a>
+                        <li><a tabindex="#"  href="http://localhost:3000/employes/sign_in">Marck Employee</a>
+              
+             
+                </ul>
+              </li>
+              <li><%= link_to "DEVELOPER", pages_developer_path %></li>
+             
+            <% end %>
+
+          
+          
+              
+            </ul>
+        </div>
+  </div>
+</div>
+            </li>
+
+           
+           
+       
+      </div>
+     
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+<%= yield %>
+
+</body>
+</html>

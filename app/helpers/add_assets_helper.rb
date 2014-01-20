@@ -1,0 +1,2 @@
+module AddAssetsHelper
+end

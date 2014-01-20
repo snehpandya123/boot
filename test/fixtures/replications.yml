@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sr_no: 1
+  particulars: MyString
+  unit: MyString
+  quantity_reqiured: 1
+  f_replication: MyString
+
+two:
+  sr_no: 1
+  particulars: MyString
+  unit: MyString
+  quantity_reqiured: 1
+  f_replication: MyString

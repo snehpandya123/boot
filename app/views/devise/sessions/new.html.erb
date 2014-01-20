@@ -1,0 +1,77 @@
+<div class="container-fluid">
+<hr>
+  <div class="row-fluid">
+  	 <div class="span4">
+       <div class="well">
+          <div id="cont" style="height: 175px"></div>
+       </div>
+        
+       <div class="well">
+          <div id="continer" style="height: 175px"></div>
+       </div>
+     </div>
+        
+      <div class="span4">
+        <div class="well">
+           <div id="container" style="min-width: 310px; height: 175px; margin: 0 auto"></div>
+        </div>
+       <div class= "well">
+          <div id="conti" style="height: 175px"></div>
+       </div>
+    </div>
+       
+      <div class="span4">
+       	 <table>
+       		 <tr>
+       		 	<td>
+                <%= image_tag("bindi.jpg", :alt => "Sample App", :class => "round" , :width => "700") %>
+    	       </td>
+             	</tr>
+             	<tr>
+        		<td>
+              <div class = "alert alert-info">
+                  <h2><center>Sign in</center></h2>
+            
+                     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                    <div>
+                      <table>
+                      <tr>
+                        <td>
+                          <br/>
+                    	   <%= f.label :email %></td>
+                      <td>
+                        <br/>
+                        <center><h1><i class="fa fa-envelope-o"></i> <%= f.email_field :email, :autofocus => true %></h1></div></center>
+</td>
+</tr>
+<br/>
+<tr>
+                    <td>
+  	                     <%= f.label :password %></td>
+                         <td>
+                         <center><h1><i class="fa fa-key"></i> <%= f.password_field :password %></h1></center></td>
+                         <tr>
+                         </table>
+
+                         <% if devise_mapping.rememberable? -%>
+                         <div>
+    	                    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+    	                </div>
+    	                
+                    <% end -%>
+                   
+               <div><center><%= f.submit "Sign in" , :class => "btn btn-success" %></div></center>
+               <br />
+               <br />
+        <% end %>
+      </div>
+<%= render "devise/shared/links" %>
+      </td>
+      </tr>
+      </table>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
